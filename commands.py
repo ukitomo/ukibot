@@ -1,8 +1,13 @@
 import discord
 from discord.ext import commands
 from discord.commands import slash_command
+from sys import exit
 
-r = open('guild_ids.txt', 'r', encoding='UTF-8') #open guild_ids file
+try:
+    r = open('guild_ids.txt', 'r', encoding='UTF-8') #open guild_ids file
+except FileNotFoundError:
+    print("guild_ids.txtを作成しサーバーidを入力してください")
+    exit(1)
 data = r.read() #read guild_ids file
 r.close() #close guild_ids file
 
