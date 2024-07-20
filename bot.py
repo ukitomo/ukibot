@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import discord
 
 r = open('token.txt', 'r', encoding='UTF-8') #open token file
