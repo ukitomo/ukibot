@@ -5,7 +5,7 @@ from sys import exit
 try:
     r = open('token.txt', 'r', encoding='UTF-8') #open token file
 except FileNotFoundError:
-    print("TOKEN.txtを作成しトークンを入力してください")
+    print("token.txtを作成しトークンを入力してください")
     exit(1)
 data = r.read() #read token file
 r.close() #close token file
