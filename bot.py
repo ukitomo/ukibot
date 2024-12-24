@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from aiohttp import connector
 import discord
 from time import sleep
 from sys import exit
@@ -21,10 +20,9 @@ bot.load_extension('commands') #load extension
 @bot.event
 async def on_ready():
     print('接続しました')
-while True:
+for i in range(5):
     try:
         bot.run(TOKEN) #launch bot
-    except connector.ClientConnectorError:
+    except Exception as e:
+        print(e)
         sleep(5)
-    except:
-        break
