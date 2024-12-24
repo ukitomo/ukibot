@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import discord
-from time import sleep
 from sys import exit
 
 try:
@@ -20,9 +19,5 @@ bot.load_extension('commands') #load extension
 @bot.event
 async def on_ready():
     print('接続しました')
-for i in range(5):
-    try:
-        bot.run(TOKEN) #launch bot
-    except Exception as e:
-        print(e)
-        sleep(5)
+
+bot.run(TOKEN) #launch bot
